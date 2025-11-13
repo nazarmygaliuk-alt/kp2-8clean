@@ -1,0 +1,25 @@
+<div class="chat p-4 h-full flex flex-col">
+  <template x-if="roomId">
+    <div class="flex flex-col h-full">
+      <div class="room-header">
+        <div><b>Your Matrix ID:</b> <span x-text="userId"></span></div>
+        <div><b>Room ID:</b> <span x-text="roomId"></span></div>
+      </div>
+
+      <div class="messages">
+        <template x-for="m in messages" :key="m.sender + m.body + Math.random()">
+          <div class="msg"><b x-text="m.sender"></b>: <span x-text="m.body"></span></div>
+        </template>
+      </div>
+
+      <div class="composer">
+        <textarea class="msg-input" x-model="newMessage" placeholder="Type your message..."></textarea>
+        <button class="btn btn-green" @click="sendMessage()">Send</button>
+      </div>
+    </div>
+  </template>
+
+  <template x-if="!roomId">
+    <div class="empty">Select or create a room to start chatting</div>
+  </template>
+</div>

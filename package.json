@@ -1,0 +1,16 @@
+{
+  "name": "project_kp2-8",
+  "version": "1.0.0",
+  "description": "Matrix Chat Client — Electron application for KP2-8 project",
+  "main": "main.js",
+  "author": "Student KP2-8",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

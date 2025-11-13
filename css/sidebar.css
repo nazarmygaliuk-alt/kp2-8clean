@@ -1,0 +1,4 @@
+.sidebar-list {
+  height: 76vh;
+  overflow-y: scroll;
+}
